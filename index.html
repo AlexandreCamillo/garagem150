@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garagem 150 · SUVs 0km até R$ 150 mil · Comparativo 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+:root {
+  --bg:        #0e0e10;
+  --surface:   #18181c;
+  --surface-2: #1f1f24;
+  --line:      #2a2a30;
+  --line-soft: #1f1f25;
+  --ink:       #f3efe7;
+  --ink-mute:  #a8a39a;
+  --ink-dim:   #6e6a62;
+  --amber:     #e8a85c;
+  --amber-dim: #b88542;
+  --leaf:      #94b87a;
+  --rust:      #c97050;
+  --paper:     #f4f0e8;
+  --display:   "Fraunces", Georgia, serif;
+  --sans:      "Manrope", sans-serif;
+  --mono:      "JetBrains Mono", monospace;
+  --pad:       clamp(1.25rem, 4vw, 3.5rem);
+  --maxw:      1320px;
+}
+
+html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+body { background: radial-gradient(1100px 600px at 80% -10%, rgba(232,168,92,0.06), transparent 60%), radial-gradient(900px 700px at -10% 30%, rgba(111,163,184,0.04), transparent 60%), var(--bg); }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: var(--amber); color: var(--bg); }
+
+.shell { max-width: var(--maxw); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); }
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--amber); display: inline-block; }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: -0.01em; }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(14,14,16,0.78); border-bottom: 1px solid var(--line-soft); }
+.nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0.9rem var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: flex; align-items: baseline; gap: 0.55rem; font-family: var(--display); font-size: 1.25rem; font-style: italic; letter-spacing: -0.02em; }
+.brand .mark { font-family: var(--mono); font-size: 0.7rem; font-style: normal; letter-spacing: 0.18em; color: var(--amber); border: 1px solid var(--amber-dim); padding: 2px 6px; border-radius: 2px; text-transform: uppercase; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.55rem 0.9rem; border: 1px solid var(--line); }
+@media (max-width: 880px) { .nav-links { display: none; } }
+
+/* HERO */
+.hero { position: relative; padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: end; }
+@media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero h1 { font-size: clamp(2.8rem, 8vw, 7rem); line-height: 0.95; letter-spacing: -0.035em; margin-top: 1.5rem; }
+.hero h1 .it { font-style: italic; color: var(--amber); }
+.hero h1 .small { font-family: var(--display); font-style: italic; font-size: 0.36em; display: block; color: var(--ink-mute); margin-top: 0.4em; letter-spacing: -0.01em; }
+.hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 2rem; }
+.hero-meta > div { background: var(--bg); padding: 1.25rem 1.1rem; }
+.hero-meta .k { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); }
+.hero-meta .v { font-family: var(--display); font-size: 1.6rem; margin-top: 0.4rem; letter-spacing: -0.02em; }
+.hero-meta .v .unit { color: var(--ink-mute); font-size: 0.65em; font-style: italic; margin-left: 4px; }
+.hero-side { border-left: 1px solid var(--line); padding-left: clamp(1rem, 2vw, 2rem); }
+.hero-side p { color: var(--ink-mute); font-size: 1.02rem; line-height: 1.65; max-width: 38ch; }
+.hero-side p + p { margin-top: 1rem; }
+.hero-marquee { margin-top: 3rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1rem 0; overflow: hidden; white-space: nowrap; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); }
+.hero-marquee span { display: inline-block; padding: 0 2rem; }
+.hero-marquee span::after { content: "◆"; color: var(--amber); margin-left: 2rem; }
+
+/* SECTION */
+.section { padding: clamp(3rem, 7vw, 5rem) 0; border-top: 1px solid var(--line); }
+.section-head { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(1rem, 3vw, 3rem); margin-bottom: clamp(2rem, 4vw, 3rem); }
+@media (max-width: 880px) { .section-head { grid-template-columns: 1fr; } }
+.section-head h2 { font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.025em; }
+.section-head h2 .it { font-style: italic; color: var(--amber); }
+.section-head .lede { font-size: 1.06rem; color: var(--ink-mute); max-width: 62ch; line-height: 1.65; align-self: end; }
+
+/* DIMENSION BARS */
+.dim-panel { background: var(--paper); color: #232323; border-radius: 4px; padding: clamp(1.5rem, 3vw, 2.5rem); position: relative; box-shadow: 0 30px 80px -30px rgba(0,0,0,0.6); }
+.dim-panel::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; border-radius: inherit; }
+.dim-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.75rem; position: relative; flex-wrap: wrap; gap: 1rem; }
+.dim-head h3 { font-family: var(--display); color: #1a1a1d; font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: -0.02em; }
+.dim-head h3 .it { font-style: italic; color: var(--rust); }
+.dim-head .legend { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #58544c; display: flex; gap: 1rem; flex-wrap: wrap; }
+.dim-head .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.dim-head .legend i { width: 14px; height: 8px; display: inline-block; border-radius: 2px; }
+.dim-head .legend .len i { background: #2a2a2e; }
+.dim-head .legend .wid i { background: #6fa3b8; }
+.dim-head .legend .hei i { background: #c97050; }
+.dim-row { display: grid; grid-template-columns: 160px 1fr; gap: 1.25rem; padding: 0.85rem 0; border-bottom: 1px dashed rgba(0,0,0,0.12); position: relative; }
+.dim-row:last-child { border-bottom: none; }
+.dim-row .label { font-family: var(--display); color: #1a1a1d; font-size: 1rem; letter-spacing: -0.01em; display: flex; flex-direction: column; justify-content: center; }
+.dim-row .label small { display: block; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6e6a62; margin-top: 2px; }
+.dim-bars { display: grid; gap: 6px; align-content: center; }
+.dim-bar { display: grid; grid-template-columns: 38px 1fr 110px; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.7rem; color: #58544c; }
+.dim-bar .axis-lbl { letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.62rem; }
+.dim-bar .bar-track { height: 14px; background: rgba(0,0,0,0.07); border-radius: 2px; position: relative; overflow: hidden; }
+.dim-bar .bar-fill { position: absolute; top: 0; left: 0; bottom: 0; border-radius: 2px; }
+.dim-bar.len .bar-fill { background: #2a2a2e; }
+.dim-bar.wid .bar-fill { background: #6fa3b8; }
+.dim-bar.hei .bar-fill { background: #c97050; }
+.dim-bar .val { color: #1a1a1d; font-size: 0.78rem; text-align: right; }
+.dim-bar .val em { color: #6e6a62; font-style: normal; font-size: 0.62rem; }
+@media (max-width: 720px) { .dim-row { grid-template-columns: 1fr; gap: 0.5rem; } .dim-bar { grid-template-columns: 32px 1fr 90px; } }
+.dim-foot { margin-top: 1.5rem; font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: #58544c; position: relative; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+/* VIEW TOGGLE */
+.view-toggle-wrap { display: flex; justify-content: flex-end; margin-bottom: 1.5rem; }
+.view-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 3px; padding: 3px; background: var(--surface); }
+.view-toggle button { background: transparent; border: none; color: var(--ink-mute); padding: 0.5rem 1rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; border-radius: 2px; display: inline-flex; align-items: center; gap: 0.45rem; }
+.view-toggle button.active { background: var(--bg); color: var(--ink); }
+.view-toggle button:hover:not(.active) { color: var(--ink); }
+.view-toggle button svg { width: 14px; height: 14px; }
+
+/* CARS GRID */
+.cars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (max-width: 1080px) { .cars { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px)  { .cars { grid-template-columns: 1fr; } }
+.car { background: var(--surface); padding: 1.5rem; display: flex; flex-direction: column; position: relative; transition: background 0.2s; }
+.car:hover { background: var(--surface-2); }
+
+/* VIEWER */
+.viewer { position: relative; aspect-ratio: 16/10; background: #0a0a0c; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; cursor: grab; user-select: none; margin-bottom: 1.25rem; }
+.viewer:active { cursor: grabbing; }
+.viewer .slides { position: absolute; inset: 0; display: flex; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
+.viewer .slide { flex: 0 0 100%; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #0a0a0c; }
+.viewer .slide img { width: 100%; height: 100%; object-fit: cover; }
+.viewer-controls { position: absolute; bottom: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+.viewer-dots { display: flex; gap: 4px; flex-wrap: wrap; max-width: 70%; pointer-events: auto; }
+.viewer-dots button { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; padding: 0; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+.viewer-dots button.active { background: var(--amber); transform: scale(1.5); }
+.viewer-nav { display: flex; gap: 4px; pointer-events: auto; }
+.viewer-nav button { width: 28px; height: 28px; background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.1); color: white; cursor: pointer; font-family: var(--mono); font-size: 0.85rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
+.viewer-nav button:hover { background: rgba(0,0,0,0.85); }
+.viewer-counter { position: absolute; top: 8px; left: 8px; font-family: var(--mono); font-size: 0.65rem; color: rgba(255,255,255,0.75); background: rgba(0,0,0,0.55); padding: 3px 7px; border-radius: 2px; z-index: 2; }
+
+/* CAR HEAD */
+.car-head { margin-bottom: 1rem; }
+.car-brand { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 0.4rem; }
+.car-name { font-family: var(--display); font-size: 1.55rem; letter-spacing: -0.02em; line-height: 1.05; }
+.car-name .it { font-style: italic; }
+.car-version { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); margin-top: 0.4rem; }
+.car-version strong { color: var(--amber); font-weight: 500; }
+
+/* CAR SPECS */
+.car-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 1rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.car-specs .k { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); display: block; }
+.car-specs .v { font-family: var(--display); font-size: 1.02rem; letter-spacing: -0.01em; margin-top: 2px; }
+.car-specs .v .unit { color: var(--ink-mute); font-size: 0.7em; margin-left: 2px; }
+
+.pc { margin-top: 1.1rem; }
+.pc h4 { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); font-weight: 500; margin-bottom: 0.5rem; }
+.pc ul { list-style: none; font-size: 0.86rem; color: var(--ink-mute); line-height: 1.55; }
+.pc ul li { padding-left: 1rem; position: relative; }
+.pc.pros ul li::before { content: "+"; position: absolute; left: 0; color: var(--leaf); font-family: var(--mono); }
+.pc.cons ul li::before { content: "−"; position: absolute; left: 0; color: var(--rust); font-family: var(--mono); }
+
+.car-perfil { margin-top: 0.9rem; font-family: var(--display); font-style: italic; font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
+.car-perfil::before { content: "“"; color: var(--amber); margin-right: 2px; }
+.car-perfil::after { content: "”"; color: var(--amber); margin-left: 2px; }
+.car-link { margin-top: auto; padding-top: 1.1rem; }
+.car-link a { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.car-link a:hover { color: var(--amber); border-color: var(--amber); }
+
+/* TABLE VIEW */
+.table-view { display: none; }
+.table-view.active { display: block; }
+.cars-grid.hidden { display: none; }
+.t-wrap { border: 1px solid var(--line); overflow-x: auto; background: var(--surface); border-radius: 2px; }
+table.modelos { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 980px; }
+table.modelos th, table.modelos td { padding: 1rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+table.modelos thead th { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); font-weight: 400; background: var(--surface-2); white-space: nowrap; }
+table.modelos tbody tr { transition: background 0.2s; cursor: pointer; }
+table.modelos tbody tr:hover { background: var(--surface-2); }
+.t-model { font-family: var(--display); font-size: 1.08rem; letter-spacing: -0.01em; }
+.t-model small { display: block; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); margin-top: 3px; }
+.t-price { font-family: var(--mono); font-size: 0.95rem; color: var(--ink); white-space: nowrap; }
+.t-motor { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-mute); white-space: nowrap; }
+.t-num { font-family: var(--mono); font-size: 0.95rem; color: var(--ink); white-space: nowrap; }
+.t-num small { color: var(--ink-dim); font-size: 0.68rem; margin-left: 3px; letter-spacing: 0.05em; }
+.t-gear { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-mute); }
+
+/* CONCLUSION */
+.conclusion { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 4vw, 4rem); align-items: start; }
+@media (max-width: 880px) { .conclusion { grid-template-columns: 1fr; } }
+.conclusion h2 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 0.98; letter-spacing: -0.03em; }
+.conclusion h2 .it { font-style: italic; color: var(--amber); }
+.ranking-list { list-style: none; display: grid; gap: 1rem; }
+.ranking-list li { display: grid; grid-template-columns: 120px 1fr; gap: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); align-items: baseline; }
+.ranking-list li:last-child { border-bottom: none; }
+.ranking-list .cat-tag { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
+.ranking-list .why { font-size: 0.96rem; color: var(--ink-mute); line-height: 1.55; }
+.ranking-list .why strong { color: var(--amber); font-family: var(--display); font-weight: 400; font-style: italic; }
+.kicker { margin-top: 2.5rem; padding: 1.75rem; border: 1px solid var(--line); border-left: 2px solid var(--amber); background: var(--surface); }
+.kicker p { font-family: var(--display); font-style: italic; font-size: clamp(1.2rem, 2.3vw, 1.6rem); line-height: 1.4; letter-spacing: -0.015em; color: var(--ink); }
+
+/* DISCLOSURE */
+.disclosure { margin-top: 2rem; padding: 1.25rem 1.5rem; border: 1px dashed var(--line); background: rgba(232,168,92,0.03); font-size: 0.85rem; color: var(--ink-mute); line-height: 1.6; }
+.disclosure strong { color: var(--amber); font-weight: 500; }
+
+/* FOOTER */
+footer { padding: 3rem 0 4rem; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 0.75rem; color: var(--ink-dim); letter-spacing: 0.05em; line-height: 1.7; }
+footer .shell { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
+@media (max-width: 720px) { footer .shell { grid-template-columns: 1fr; } }
+footer h5 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.6rem; }
+footer .small { font-size: 0.7rem; color: var(--ink-dim); line-height: 1.6; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fadeUp 0.8s ease-out both; }
+.delay-1 { animation-delay: 0.1s; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Garagem<span style="font-style:normal;">150</span><span class="mark">2026</span></div>
+    <div class="nav-links">
+      <a href="#dimensoes">Dimensões</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#ranking">Ranking</a>
+    </div>
+    <a class="nav-cta" href="#conclusao">Conclusão →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="shell">
+    <div class="hero-grid">
+      <div class="fade-up">
+        <span class="eyebrow">Comparativo 2026 · 8 SUVs 0km · R$ 119–157 mil</span>
+        <h1>
+          SUVs até <span class="it">R$ 150 mil</span>
+          <span class="small">comparativo neutro · versão fixada de cada modelo</span>
+        </h1>
+        <div class="hero-meta">
+          <div><div class="k">Modelos</div><div class="v">08<span class="unit">comparados</span></div></div>
+          <div><div class="k">Faixa</div><div class="v">119<span class="unit">a 157 mil</span></div></div>
+          <div><div class="k">Versões</div><div class="v">Fixadas<span class="unit">por carro</span></div></div>
+        </div>
+      </div>
+      <aside class="hero-side fade-up delay-1">
+        <p>Oito SUVs reais, cada um com uma versão específica fixada — sem comparar a entrada de um com o topo do outro. Preços oficiais 2026 de fábrica, fotos das galerias das montadoras, especs verificadas.</p>
+        <p>Sem favoritos. Sem propaganda. Os números mostram que cada carro tem um motivo pra existir — e um perfil de comprador diferente.</p>
+      </aside>
+    </div>
+  </div>
+  <div class="hero-marquee" aria-hidden="true">
+    <span>Tiggo 5X Pro</span><span>T-Cross 200 TSI</span><span>Creta Comfort</span><span>Tracker LT</span><span>Fastback T200</span><span>Nivus Comfortline</span><span>Kardian Iconic</span><span>Renegade Altitude</span><span>Tiggo 5X Pro</span>
+  </div>
+</section>
+
+
+<section class="section" id="dimensoes">
+  <div class="shell">
+    <header class="section-head">
+      <div>
+        <span class="eyebrow">01 · Dimensões em escala</span>
+        <h2>Tamanho <span class="it">real</span></h2>
+      </div>
+      <p class="lede">Comprimento, largura e altura de cada modelo na mesma escala visual. Diferenças que importam ao estacionar, dirigir na cidade ou viajar com família. Medidas oficiais em milímetros.</p>
+    </header>
+
+    <div class="dim-panel">
+      <div class="dim-head">
+        <h3>Comparativo <span class="it">dimensional</span></h3>
+        <div class="legend">
+          <span class="len"><i></i> Comprimento</span>
+          <span class="wid"><i></i> Largura</span>
+          <span class="hei"><i></i> Altura</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Tiggo 5X Pro<small>CAOA Chery · Pro</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 97.3%;"></div></div><span class="val">4320<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 100.0%;"></div></div><span class="val">1831<em> mm · max</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 97.3%;"></div></div><span class="val">1652<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">T-Cross<small>Volkswagen · 200 TSI</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 95.0%;"></div></div><span class="val">4218<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 96.1%;"></div></div><span class="val">1760<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 93.3%;"></div></div><span class="val">1584<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Creta<small>Hyundai · Comfort</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 97.5%;"></div></div><span class="val">4330<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 97.8%;"></div></div><span class="val">1790<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 95.5%;"></div></div><span class="val">1620<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Tracker<small>Chevrolet · LT</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 96.5%;"></div></div><span class="val">4283<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 97.8%;"></div></div><span class="val">1791<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 95.6%;"></div></div><span class="val">1623<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Fastback<small>Fiat · T200</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 100.0%;"></div></div><span class="val">4440<em> mm · max</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 96.9%;"></div></div><span class="val">1774<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 91.3%;"></div></div><span class="val">1549<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Nivus<small>Volkswagen · Comfortline</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 96.2%;"></div></div><span class="val">4272<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 96.0%;"></div></div><span class="val">1757<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 88.0%;"></div></div><span class="val">1493<em> mm · min</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Kardian<small>Renault · Iconic</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 92.8%;"></div></div><span class="val">4119<em> mm · min</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 95.4%;"></div></div><span class="val">1747<em> mm · min</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 91.0%;"></div></div><span class="val">1544<em> mm</em></span></div>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="label">Renegade<small>Jeep · Altitude</small></div>
+        <div class="dim-bars">
+          <div class="dim-bar len"><span class="axis-lbl">C</span><div class="bar-track"><div class="bar-fill" style="width: 95.4%;"></div></div><span class="val">4236<em> mm</em></span></div>
+          <div class="dim-bar wid"><span class="axis-lbl">L</span><div class="bar-track"><div class="bar-fill" style="width: 98.6%;"></div></div><span class="val">1805<em> mm</em></span></div>
+          <div class="dim-bar hei"><span class="axis-lbl">A</span><div class="bar-track"><div class="bar-fill" style="width: 100.0%;"></div></div><span class="val">1697<em> mm · max</em></span></div>
+        </div>
+      </div>
+      <div class="dim-foot">
+        <span>Painel técnico · escala uniforme · mm oficiais</span>
+        <span>Δ comp: 321mm · Δ larg: 84mm · Δ alt: 204mm</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="modelos">
+  <div class="shell">
+    <header class="section-head">
+      <div>
+        <span class="eyebrow">02 · Cada modelo</span>
+        <h2>Os <span class="it">candidatos</span></h2>
+      </div>
+      <p class="lede">Versão fixada de cada carro: a configuração mais perto da faixa de R$ 145 mil. Cada card tem todas as fotos disponíveis no carrossel (arraste no celular ou clique nas setas). Use o botão à direita para alternar entre cards e tabela.</p>
+    </header>
+
+    <div class="view-toggle-wrap">
+      <div class="view-toggle" role="tablist">
+        <button class="active" data-view="cards" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Cards
+        </button>
+        <button data-view="table" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Tabela
+        </button>
+      </div>
+    </div>
+
+    <div class="cars-grid">
+      <div class="cars">
+      <article class="car" data-car="tiggo5x-pro">
+        <div class="viewer" data-total="19">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">19</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-22.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-23.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-24.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-25.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-26.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-27.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-28.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tiggo5x-pro/tiggo5x-pro-29.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">CAOA Chery</div>
+          <h3 class="car-name">Tiggo 5X <span class="it">Pro</span></h3>
+          <div class="car-version">Versão: <strong>Pro</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 144.990</span></div>
+          <div><span class="k">Motor</span><span class="v">1.5 Turbo</span></div>
+          <div><span class="k">Potência</span><span class="v">150<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">22,8<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">CVT 9s</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">340<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">7<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">8,6/10,4<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Painel ultrawide de 20.5"</li>
+            <li>7 airbags · ADAS Max Drive 2.0</li>
+            <li>Câmera 360º · teto solar panorâmico</li>
+            <li>Garantia de 7 anos · a maior do segmento</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Consumo maior por ser 1.5</li>
+            <li>Revenda inferior a marcas tradicionais</li>
+            <li>Rede de concessionárias menor</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem quer mais carro pelo preço, com pacote completo de fábrica.</div>
+        <div class="car-link">
+          <a href="https://caoachery.com.br/novos/tiggo-5x-pro-2027" target="_blank" rel="noopener">Site oficial CAOA →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="tcross-200tsi">
+        <div class="viewer" data-total="20">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">20</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-03.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tcross-200tsi/tcross-200tsi-20.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Volkswagen</div>
+          <h3 class="car-name">T-<span class="it">Cross</span></h3>
+          <div class="car-version">Versão: <strong>200 TSI</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 152.490</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 TSI</span></div>
+          <div><span class="k">Potência</span><span class="v">128<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">20,4<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">Aut. 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">373<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">3<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">9,4/11,2<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>SUV mais vendido do Brasil</li>
+            <li>6 airbags · 5 estrelas Latin NCAP</li>
+            <li>Bom espaço interno e revenda forte</li>
+            <li>VW Play Connect com internet embarcada</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Interior mais simples na faixa de preço</li>
+            <li>Sense (entrada) é muito pelada</li>
+            <li>Para topo de linha precisa subir muito</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Escolha racional, baixo risco, melhor revenda do grupo.</div>
+        <div class="car-link">
+          <a href="https://www.vw.com.br/pt/carros/t-cross.html" target="_blank" rel="noopener">Site oficial VW →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="creta-comfort">
+        <div class="viewer" data-total="33">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">33</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-03.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-22.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-23.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-24.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-25.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-26.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-28.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-30.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-31.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-32.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-33.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-34.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/creta-comfort/creta-comfort-35.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Hyundai</div>
+          <h3 class="car-name"><span class="it">Creta</span></h3>
+          <div class="car-version">Versão: <strong>Comfort</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 156.590</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 TGDi</span></div>
+          <div><span class="k">Potência</span><span class="v">120<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">17,5<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">Aut. 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">422<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">5<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">8,9/11,5<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Maior porta-malas (422 L) do grupo</li>
+            <li>Entre-eixos 2610mm · cabine espaçosa</li>
+            <li>Bluelink gratuito por 5 anos</li>
+            <li>Pós-venda Hyundai forte</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Visual atual divide opiniões</li>
+            <li>SmartSense só nas versões caras</li>
+            <li>Comfort é a entrada · sem ADAS de série</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Família pequena, uso urbano e foco em conforto.</div>
+        <div class="car-link">
+          <a href="https://www.hyundai.com.br/veiculos/novo-hyundai-creta.html" target="_blank" rel="noopener">Site oficial Hyundai →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="tracker-lt">
+        <div class="viewer" data-total="31">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">31</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-22.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-23.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-24.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-25.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-26.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-27.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-28.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-29.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-30.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-31.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/tracker-lt/tracker-lt-32.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Chevrolet</div>
+          <h3 class="car-name"><span class="it">Tracker</span></h3>
+          <div class="car-version">Versão: <strong>LT</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 138.390</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 Turbo</span></div>
+          <div><span class="k">Potência</span><span class="v">116<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">16,3<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">Aut. 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">393<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">5<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">9,3/11,8<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Bom consumo no segmento</li>
+            <li>MyLink com conectividade nativa</li>
+            <li>Rede Chevrolet ampla</li>
+            <li>Versão LT já vem com itens essenciais</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Motor 1.0 menos forte que rivais</li>
+            <li>Acabamento mais simples</li>
+            <li>Versão LT não tem teto solar nem ADAS</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem roda muito, quer economia e rede ampla.</div>
+        <div class="car-link">
+          <a href="https://www.chevrolet.com.br/suvs/novo-tracker" target="_blank" rel="noopener">Site oficial Chevrolet →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="fastback-t200">
+        <div class="viewer" data-total="20">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">20</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-22.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-23.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-24.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/fastback-t200/fastback-t200-25.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Fiat</div>
+          <h3 class="car-name"><span class="it">Fastback</span></h3>
+          <div class="car-version">Versão: <strong>T200</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 119.990</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 Turbo</span></div>
+          <div><span class="k">Potência</span><span class="v">130<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">20,4<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">CVT 7s</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">600<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">3<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">9,2/11,9<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Maior porta-malas absoluto (600 L)</li>
+            <li>Design SUV cupê diferenciado</li>
+            <li>Mais comprido do grupo (4,44m)</li>
+            <li>Preço de entrada bem abaixo do grupo</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Espaço de cabeça traseiro menor pelo teto</li>
+            <li>T200 é versão de entrada · enxuta</li>
+            <li>Pós-venda Fiat divide opiniões</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem prioriza estilo, porta-malas e preço de entrada baixo.</div>
+        <div class="car-link">
+          <a href="https://www.fiat.com.br/fastback.html" target="_blank" rel="noopener">Site oficial Fiat →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="nivus-comfortline">
+        <div class="viewer" data-total="17">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">17</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-03.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/nivus-comfortline/nivus-comfortline-17.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Volkswagen</div>
+          <h3 class="car-name"><span class="it">Nivus</span></h3>
+          <div class="car-version">Versão: <strong>Comfortline</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 153.000</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 TSI</span></div>
+          <div><span class="k">Potência</span><span class="v">128<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">20,4<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">Aut. 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">415<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">3<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">9,6/11,7<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Mesma plataforma MQB do T-Cross</li>
+            <li>Boa dirigibilidade e consumo eficiente</li>
+            <li>Design cupê discreto</li>
+            <li>Boa revenda</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>O mais baixo do grupo (1493mm)</li>
+            <li>Proposta mais compacta · espaço menor</li>
+            <li>Interior simples para a faixa</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem quer SUV cupê compacto e jovem com revenda VW.</div>
+        <div class="car-link">
+          <a href="https://www.vw.com.br/pt/carros/nivus.html" target="_blank" rel="noopener">Site oficial VW →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="kardian-iconic">
+        <div class="viewer" data-total="26">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">26</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-02.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-03.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-22.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-23.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-24.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-25.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/kardian-iconic/kardian-iconic-26.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Renault</div>
+          <h3 class="car-name"><span class="it">Kardian</span></h3>
+          <div class="car-version">Versão: <strong>Iconic</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 149.990</span></div>
+          <div><span class="k">Motor</span><span class="v">1.0 Turbo</span></div>
+          <div><span class="k">Potência</span><span class="v">125<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">22,4<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">DCT 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">410<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">3<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">9,8/12,1<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>Projeto mais novo do grupo</li>
+            <li>Câmbio DCT de dupla embreagem</li>
+            <li>Iconic já é topo de linha · 360º + BSW</li>
+            <li>Único que entrega topo na faixa do Tiggo</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Modelo recente · pouco histórico de revenda</li>
+            <li>Rede menor que VW/GM</li>
+            <li>O mais curto do grupo (4119mm)</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem quer topo de linha moderno dentro do orçamento.</div>
+        <div class="car-link">
+          <a href="https://www.renault.com.br/gama-renault/kardian.html" target="_blank" rel="noopener">Site oficial Renault →</a>
+        </div>
+      </article>
+
+      <article class="car" data-car="renegade-altitude">
+        <div class="viewer" data-total="20">
+          <span class="viewer-counter"><span class="cur">1</span>/<span class="tot">20</span></span>
+          <div class="slides">
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-01.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-04.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-05.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-06.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-07.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-08.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-09.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-10.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-11.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-12.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-13.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-14.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-15.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-16.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-17.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-18.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-19.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-20.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-21.jpg" alt=""></div>
+            <div class="slide"><img loading="lazy" src="images/renegade-altitude/renegade-altitude-22.jpg" alt=""></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="viewer-dots"></div>
+            <div class="viewer-nav"><button class="prev" aria-label="Anterior">‹</button><button class="next" aria-label="Próximo">›</button></div>
+          </div>
+        </div>
+        <div class="car-head">
+          <div class="car-brand">Jeep</div>
+          <h3 class="car-name"><span class="it">Renegade</span></h3>
+          <div class="car-version">Versão: <strong>Altitude</strong></div>
+        </div>
+        <div class="car-specs">
+          <div><span class="k">Preço</span><span class="v">R$ 142.990</span></div>
+          <div><span class="k">Motor</span><span class="v">1.3 Turbo</span></div>
+          <div><span class="k">Potência</span><span class="v">176<span class="unit">cv</span></span></div>
+          <div><span class="k">Torque</span><span class="v">27,5<span class="unit">kgfm</span></span></div>
+          <div><span class="k">Câmbio</span><span class="v">Aut. 6</span></div>
+          <div><span class="k">Porta-malas</span><span class="v">320<span class="unit">L</span></span></div>
+          <div><span class="k">Garantia</span><span class="v">5<span class="unit">anos</span></span></div>
+          <div><span class="k">Consumo (cid/est)</span><span class="v">7,7/11,0<span class="unit">km/L</span></span></div>
+        </div>
+        <div class="pc pros">
+          <h4>Pontos fortes</h4>
+          <ul>
+            <li>176 cv · motor mais forte do grupo</li>
+            <li>27,5 kgfm de torque · retomadas fortes</li>
+            <li>Marca Jeep · valor de marca</li>
+            <li>O mais alto · postura SUV de verdade</li>
+          </ul>
+        </div>
+        <div class="pc cons">
+          <h4>Pontos fracos</h4>
+          <ul>
+            <li>Consumo maior · motor mais sedento</li>
+            <li>Porta-malas pequeno (320 L · o menor)</li>
+            <li>Manutenção mais cara</li>
+          </ul>
+        </div>
+        <div class="car-perfil">Quem prioriza desempenho, marca e postura SUV.</div>
+        <div class="car-link">
+          <a href="https://www.jeep.com.br/renegade.html" target="_blank" rel="noopener">Site oficial Jeep →</a>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="table-view">
+      <div class="t-wrap">
+        <table class="modelos">
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Preço</th>
+              <th>Motor</th>
+              <th>Potência</th>
+              <th>Torque</th>
+              <th>Câmbio</th>
+              <th>Porta-malas</th>
+              <th>Consumo (cid/est)</th>
+              <th>Garantia</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><div class="t-model">Tiggo 5X Pro<small>CAOA Chery · Pro</small></div></td>
+            <td class="t-price">R$ 144.990</td>
+            <td class="t-motor">1.5 Turbo</td>
+            <td class="t-num">150<small>cv</small></td>
+            <td class="t-num">22,8<small>kgfm</small></td>
+            <td class="t-gear">CVT 9s</td>
+            <td class="t-num">340<small>L</small></td>
+            <td class="t-num">8,6/10,4<small>km/L</small></td>
+            <td class="t-num">7<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">T-Cross<small>Volkswagen · 200 TSI</small></div></td>
+            <td class="t-price">R$ 152.490</td>
+            <td class="t-motor">1.0 TSI</td>
+            <td class="t-num">128<small>cv</small></td>
+            <td class="t-num">20,4<small>kgfm</small></td>
+            <td class="t-gear">Aut. 6</td>
+            <td class="t-num">373<small>L</small></td>
+            <td class="t-num">9,4/11,2<small>km/L</small></td>
+            <td class="t-num">3<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Creta<small>Hyundai · Comfort</small></div></td>
+            <td class="t-price">R$ 156.590</td>
+            <td class="t-motor">1.0 TGDi</td>
+            <td class="t-num">120<small>cv</small></td>
+            <td class="t-num">17,5<small>kgfm</small></td>
+            <td class="t-gear">Aut. 6</td>
+            <td class="t-num">422<small>L</small></td>
+            <td class="t-num">8,9/11,5<small>km/L</small></td>
+            <td class="t-num">5<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Tracker<small>Chevrolet · LT</small></div></td>
+            <td class="t-price">R$ 138.390</td>
+            <td class="t-motor">1.0 Turbo</td>
+            <td class="t-num">116<small>cv</small></td>
+            <td class="t-num">16,3<small>kgfm</small></td>
+            <td class="t-gear">Aut. 6</td>
+            <td class="t-num">393<small>L</small></td>
+            <td class="t-num">9,3/11,8<small>km/L</small></td>
+            <td class="t-num">5<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Fastback<small>Fiat · T200</small></div></td>
+            <td class="t-price">R$ 119.990</td>
+            <td class="t-motor">1.0 Turbo</td>
+            <td class="t-num">130<small>cv</small></td>
+            <td class="t-num">20,4<small>kgfm</small></td>
+            <td class="t-gear">CVT 7s</td>
+            <td class="t-num">600<small>L</small></td>
+            <td class="t-num">9,2/11,9<small>km/L</small></td>
+            <td class="t-num">3<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Nivus<small>Volkswagen · Comfortline</small></div></td>
+            <td class="t-price">R$ 153.000</td>
+            <td class="t-motor">1.0 TSI</td>
+            <td class="t-num">128<small>cv</small></td>
+            <td class="t-num">20,4<small>kgfm</small></td>
+            <td class="t-gear">Aut. 6</td>
+            <td class="t-num">415<small>L</small></td>
+            <td class="t-num">9,6/11,7<small>km/L</small></td>
+            <td class="t-num">3<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Kardian<small>Renault · Iconic</small></div></td>
+            <td class="t-price">R$ 149.990</td>
+            <td class="t-motor">1.0 Turbo</td>
+            <td class="t-num">125<small>cv</small></td>
+            <td class="t-num">22,4<small>kgfm</small></td>
+            <td class="t-gear">DCT 6</td>
+            <td class="t-num">410<small>L</small></td>
+            <td class="t-num">9,8/12,1<small>km/L</small></td>
+            <td class="t-num">3<small>anos</small></td>
+          </tr>
+          <tr>
+            <td><div class="t-model">Renegade<small>Jeep · Altitude</small></div></td>
+            <td class="t-price">R$ 142.990</td>
+            <td class="t-motor">1.3 Turbo</td>
+            <td class="t-num">176<small>cv</small></td>
+            <td class="t-num">27,5<small>kgfm</small></td>
+            <td class="t-gear">Aut. 6</td>
+            <td class="t-num">320<small>L</small></td>
+            <td class="t-num">7,7/11,0<small>km/L</small></td>
+            <td class="t-num">5<small>anos</small></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="disclosure">
+      <strong>Notas:</strong> Os preços listados são oficiais de fábrica (linha 2026), sem opcionais, sem bônus e sem frete — variam conforme região, concessionária e estoque. Consumo é o oficial do Inmetro/PBEV para gasolina. Garantia é a oficial de fábrica para defeitos de fabricação. <strong>O Tiggo 5X Pro é o único modelo com uma única versão na linha;</strong> os demais carros têm versões mais baratas (entrada) e mais caras (topo) acima e abaixo da fixada aqui.
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="ranking">
+  <div class="shell">
+    <header class="section-head">
+      <div>
+        <span class="eyebrow">03 · Cada um no que é melhor</span>
+        <h2>Quem <span class="it">vence</span> em quê</h2>
+      </div>
+      <p class="lede">Não existe "melhor SUV" absoluto — existe o melhor para a sua prioridade. Aqui está o líder objetivo de cada categoria.</p>
+    </header>
+
+    <ul class="ranking-list">
+      <li><span class="cat-tag">Mais barato</span><span class="why"><strong>Fastback T200</strong> · R$ 119.990. Maior porta-malas, design diferenciado, mas é a versão de entrada da Fiat.</span></li>
+      <li><span class="cat-tag">Mais carro pelo preço</span><span class="why"><strong>Tiggo 5X Pro</strong> · única versão custa R$ 144.990 e já entrega painel grande, 7 airbags, ADAS e teto solar — itens que rivais cobram R$ 170k+ para oferecer.</span></li>
+      <li><span class="cat-tag">Maior porta-malas</span><span class="why"><strong>Fastback T200</strong> · 600 L · disparado o maior do grupo. Creta vem em segundo com 422 L.</span></li>
+      <li><span class="cat-tag">Mais potente</span><span class="why"><strong>Renegade Altitude</strong> · 176 cv · 27,5 kgfm. Único acima de 150 cv no grupo.</span></li>
+      <li><span class="cat-tag">Maior garantia</span><span class="why"><strong>Tiggo 5X Pro</strong> · 7 anos. Creta, Tracker e Renegade têm 5; VW e Fiat ficam em 3.</span></li>
+      <li><span class="cat-tag">Melhor consumo</span><span class="why"><strong>Kardian Iconic</strong> · 9,8/12,1 km/L (cidade/estrada). Tracker e Nivus vêm logo atrás.</span></li>
+      <li><span class="cat-tag">Melhor revenda</span><span class="why"><strong>T-Cross 200 TSI</strong> · SUV mais vendido do Brasil. Liquidez de mercado garantida, baixo risco na revenda.</span></li>
+      <li><span class="cat-tag">Topo de linha na faixa</span><span class="why"><strong>Kardian Iconic</strong> · único cuja versão topo de linha cabe em R$ 150 mil. Câmera 360º, ponto cego, sensor frontal — todos de série.</span></li>
+      <li><span class="cat-tag">Tradição/marca</span><span class="why"><strong>Renegade Altitude</strong> · marca Jeep, postura SUV de verdade (1697mm de altura), motor parrudo.</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="section" id="conclusao">
+  <div class="shell">
+    <div class="conclusion">
+      <div>
+        <span class="eyebrow">04 · Veredito</span>
+        <h2>Qual faz mais <span class="it">sentido?</span></h2>
+        <p style="margin-top:1.5rem;color:var(--ink-mute);max-width:42ch;line-height:1.65;">A resposta depende menos do preço de tabela e mais da sua prioridade real. Os 8 carros estão na mesma faixa, mas cada um foi pensado para um perfil diferente de comprador.</p>
+      </div>
+      <ul class="ranking-list">
+        <li><span class="cat-tag">Tiggo 5X Pro</span><span class="why">Para quem prioriza pacote completo de fábrica e não se importa com revenda.</span></li>
+        <li><span class="cat-tag">T-Cross 200 TSI</span><span class="why">Escolha mais conservadora e líquida — a "compra que não dá errado".</span></li>
+        <li><span class="cat-tag">Creta Comfort</span><span class="why">Família urbana com prioridade em porta-malas e pós-venda Hyundai.</span></li>
+        <li><span class="cat-tag">Tracker LT</span><span class="why">Quem roda muito e quer rede ampla com motor econômico.</span></li>
+        <li><span class="cat-tag">Fastback T200</span><span class="why">Quem prioriza estilo, porta-malas grande e preço de entrada baixo.</span></li>
+        <li><span class="cat-tag">Nivus Comfortline</span><span class="why">SUV cupê compacto com revenda VW e proposta jovem.</span></li>
+        <li><span class="cat-tag">Kardian Iconic</span><span class="why">Topo de linha moderno cabe no orçamento — câmbio DCT, sensores 360º.</span></li>
+        <li><span class="cat-tag">Renegade Altitude</span><span class="why">Quem prioriza desempenho, marca Jeep e postura SUV alta.</span></li>
+      </ul>
+    </div>
+    <div class="kicker">
+      <p>Os 8 carros disputam o mesmo bolso, mas resolvem problemas diferentes. Antes de visitar a concessionária, decida <span style="color:var(--amber);">qual problema</span> você quer resolver.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="shell">
+    <div>
+      <h5>Sobre este comparativo</h5>
+      <p class="small">Comparativo independente. Preços oficiais de fábrica, linha 2026, sem opcionais nem bônus — variam conforme região e concessionária. Especs baseadas em fichas oficiais das 8 montadoras. Nenhuma marca patrocinou esta análise.</p>
+    </div>
+    <div>
+      <h5>Fotos</h5>
+      <p class="small">186 fotos no total · armazenadas localmente na pasta /images · baixadas das galerias oficiais das 8 montadoras. Algumas foram processadas para upscale e padronização de qualidade.</p>
+    </div>
+    <div>
+      <h5>Versões fixadas</h5>
+      <p class="small">Versão escolhida de cada carro: a mais próxima da faixa de R$ 145 mil. Todos os modelos têm outras versões — entrada mais barata e topo mais caro — fora desta comparação.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ============ VIEW TOGGLE ============
+(function() {
+  const buttons = document.querySelectorAll('.view-toggle button');
+  const cardsView = document.querySelector('.cars-grid');
+  const tableView = document.querySelector('.table-view');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      const view = btn.dataset.view;
+      if (view === 'cards') {
+        cardsView.classList.remove('hidden');
+        tableView.classList.remove('active');
+      } else {
+        cardsView.classList.add('hidden');
+        tableView.classList.add('active');
+      }
+    });
+  });
+})();
+
+// ============ CAROUSEL ============
+(function () {
+  document.querySelectorAll('.viewer').forEach(viewer => {
+    const slides = viewer.querySelector('.slides');
+    if (!slides) return;
+    const slideEls = slides.querySelectorAll('.slide');
+    const total = slideEls.length;
+    if (total <= 1) {
+      const controls = viewer.querySelector('.viewer-controls');
+      if (controls) controls.style.display = 'none';
+      return;
+    }
+    let index = 0;
+    const dotsContainer = viewer.querySelector('.viewer-dots');
+    const prevBtn = viewer.querySelector('.prev');
+    const nextBtn = viewer.querySelector('.next');
+    const counter = viewer.querySelector('.viewer-counter .cur');
+    if (dotsContainer) {
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(i); });
+        dotsContainer.appendChild(dot);
+      }
+    }
+    function update() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('button').forEach((d, i) => {
+          d.classList.toggle('active', i === index);
+        });
+      }
+      if (counter) counter.textContent = index + 1;
+    }
+    function goTo(i) { index = ((i % total) + total) % total; update(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+
+    let startX = 0, deltaX = 0, dragging = false;
+    viewer.addEventListener('pointerdown', e => {
+      if (e.target.closest('button')) return;
+      dragging = true; startX = e.clientX; deltaX = 0;
+      slides.style.transition = 'none';
+    });
+    viewer.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      deltaX = e.clientX - startX;
+      const offset = -index * 100 + (deltaX / viewer.offsetWidth) * 100;
+      slides.style.transform = `translateX(${offset}%)`;
+    });
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      slides.style.transition = '';
+      if (Math.abs(deltaX) > viewer.offsetWidth * 0.15) {
+        if (deltaX < 0) next();
+        else prev();
+      } else { update(); }
+      deltaX = 0;
+    }
+    viewer.addEventListener('pointerup', endDrag);
+    viewer.addEventListener('pointercancel', endDrag);
+    viewer.addEventListener('pointerleave', endDrag);
+    update();
+  });
+})();
+</script>
+
+</body>
+</html>
